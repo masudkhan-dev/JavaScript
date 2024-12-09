@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>shopping cart</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="container mx-auto my-10">
+    <div>
+        <div class="space-x-4">
+            <input
+              id="product-name"
+              type="text"
+              placeholder="Product"
+              class="input input-bordered w-full max-w-xs"
+            />
+            <input
+              id="product-quantity"
+              type="text"
+              placeholder="quantitys"
+              class="input input-bordered w-full max-w-xs"
+            />
+            <button onclick="addProduct()" class="btn btn-neutral">
+              Add Product
+            </button>
+          </div>
+          <div>
+            <ul id="product-container">
+
+            </ul>
+          </div>
+    </div>
+    <!-- script link -->
+    <script  src="cart.js"></script>
+  </body>
+</html>

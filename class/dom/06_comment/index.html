@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Please add your comment</h1>
+
+    <div id="container">
+      <p>
+        Error sint quae culpa reprehenderit nostrum. Quasi, nesciunt. Ipsam qui
+        aliquid fugit! Adipisci at eaque, illum omnis repudiandae quaerat
+        laboriosam magni molestiae tempore consectetur aliquid quasi ad sint
+        ipsum delectus beatae rem repellendus deleniti reiciendis. Voluptatum
+        eius amet optio, ratione voluptate provident repudiandae saepe nesciunt
+        repellendus quod? Porro, eius corporis.
+      </p>
+    </div>
+
+    <div>
+      <textarea name="" id="new-comment" cols="30" rows="5"></textarea>
+      <br />
+      <button id="btn-post">post</button>
+    </div>
+
+    <script>
+      // step-1: add event listener দিয়ে পোস্ট বাটন ধরলাম 
+      document
+        .getElementById("btn-post")
+        .addEventListener("click", function () {
+          //  ইনপুট এর পোস্ট ধরা 
+          const box = document.getElementById("new-comment");
+          const inputText = box.value;
+          box.value = "";
+
+          // step-3: set the comment inside the container
+          const container = document.getElementById("container");
+          const p = document.createElement("p");
+          p.innerText = inputText;
+
+          container.appendChild(p);
+        });
+    </script>
+  </body>
+</html>

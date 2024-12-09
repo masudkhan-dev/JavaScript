@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2 id="title">hello javaScript</h2>
+
+    <div>
+      <input type="text" placeholder="please write delete" id="input" />
+      <button id="btn-delete" disabled>delete</button>
+    </div>
+
+    <script>
+      document
+        .getElementById("btn-delete")
+        .addEventListener("click", function () {
+          const text = document.getElementById("title");
+          text.style.display = "none";
+        });
+
+      document.getElementById("input").addEventListener("keyup", function (e) {
+        const inputValue = e.target.value;
+        const deleteBtn = document.getElementById("btn-delete");
+
+        if (inputValue === "delete") {
+          deleteBtn.removeAttribute("disabled");
+        } else {
+          deleteBtn.setAttribute("disabled", true);
+        }
+      });
+    </script>
+  </body>
+</html>

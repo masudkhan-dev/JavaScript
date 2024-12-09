@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js github event</title>
+  </head>
+  <body>
+    <h2 id="secret-text">My secret information</h2>
+    <div>
+      <input type="text" id="delete-conformation" />
+      <button id="secret" disabled>delete</button>
+    </div>
+
+    <script>
+      // step-1:
+
+      document.getElementById("secret").addEventListener("click", function () {
+        const secret = document.getElementById("secret-text");
+        secret.style.display = "none";
+      });
+
+      // step-2:
+      document
+        .getElementById("delete-conformation")
+        .addEventListener("keyup", function (e) {
+          const text = e.target.value;
+          const deleteBtn = document.getElementById("secret");
+
+          if (text === "delete") {
+            deleteBtn.removeAttribute("disabled");
+          } else {
+            deleteBtn.setAttribute("disabled", true);
+          }
+        });
+    </script>
+  </body>
+</html>

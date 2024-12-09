@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js event key up down press</title>
+  </head>
+  <body>
+    <div>
+      <h2>Explore more events</h2>
+      <button id="click-me">click me</button>
+      <input type="text" id="input-field" />
+    </div>
+
+    <script>
+      // mousemove event মাউস নড়া চড়া করলে কাজ করে
+      document
+        .getElementById("click-me")
+        .addEventListener("mousemove", function () {
+          console.log("hello javascript event mouse move");
+        });
+
+
+   // mouseenter event: মাউস নড়া চড়া করলে কাজ করে
+      document
+        .getElementById("click-me")
+        .addEventListener("mouseenter", function () {
+          console.log("hello javascript event mouse enter");
+        });
+
+   // mouseenter leave: মাউস নড়া চড়া করলে কাজ করে
+      document
+        .getElementById("click-me")
+        .addEventListener("mouseleave", function () {
+          console.log("hello javascript event mouse leave");
+        });
+
+   // mouseenter out: মাউস নড়া চড়া করলে কাজ করে
+      document
+        .getElementById("click-me")
+        .addEventListener("mouseout", function () {
+          console.log("hello javascript event mouse out");
+        });
+
+      // --------------- for keyboard:  --------------------
+
+      // focus: input ভিতরে ক্লিক করলে কাজ করে
+      document
+        .getElementById("input-field")
+        .addEventListener("focus", function () {
+          console.log("hello js event focus");
+        });
+
+      // blur: input বাইরে ক্লিক করলে কাজ করে
+      document
+        .getElementById("input-field")
+        .addEventListener("blur", function () {
+          console.log("hello js event blur");
+        });
+
+      // keydown: input keyboard button ক্লিক করলে কাজ করে
+      document
+        .getElementById("input-field")
+        .addEventListener("keydown", function (e) {
+          console.log(e.target.value);
+        });
+
+      // keypress: input keyboard button ক্লিক করলে কাজ করে
+      document
+        .getElementById("input-field")
+        .addEventListener("keypress", function (e) {
+          console.log(e.target.value);
+        });
+
+      // keyup: input keyboard button ক্লিক করলে কাজ করে
+      document
+        .getElementById("input-field")
+        .addEventListener("keyup", function (e) {
+          console.log(e.target.value);
+        });
+    </script>
+  </body>
+</html>

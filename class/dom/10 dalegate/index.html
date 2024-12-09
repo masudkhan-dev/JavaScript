@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>deligate</title>
+  </head>
+  <body>
+    <h2>Explore event deligate</h2>
+
+    <section>
+      <ul>
+        <li class="item">Lorem, ipsum dolor.</li>
+        <li class="item">Ipsam, ipsa nihil!</li>
+        <li class="item">Nobis, corrupti asperiores.</li>
+        <li class="item">Earum, qui illo.</li>
+        <li class="item">Ipsam, exercitationem natus?</li>
+        <li class="item">Voluptates, labore aspernatur.</li>
+      </ul>
+      <button id="add-btn">Add Item</button>
+    </section>
+
+
+    <script>
+      const items = document.getElementsByClassName("item");
+
+      for (const item of items) {
+        item.addEventListener("click", function () {
+          console.log(item.innerText);
+        });
+      }
+
+      // একই কাজ কিন্তু ভিন্ন ভাবে করা যায়
+      for (const item of items) {
+        item.addEventListener("click", function (e) {
+          console.log(e.target.innerText);
+
+          console.log(e.target.parentNode);
+
+          // আমরা চাচ্ছি যে আইটেম ক্লিক করব সেটা রিমুভ হয়ে যাবে
+
+          e.target.parentNode.removeChild(e.target);
+        });
+      }
+    </script>
+  </body>
+</html>

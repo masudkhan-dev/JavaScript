@@ -1,0 +1,11 @@
+Task-1: Free drinks
+
+Task-2: BMI Calculator
+
+Task-3: Grade Point
+
+Task-4: 17_9 video in 6:32 mins
+
+Task-5: video in 7:22 mins
+
+Task-6: Ticket fare

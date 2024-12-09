@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>hunting phone api trial</title>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="container mx-auto">
+        <header class="bg-gray-200 px-10 py-4">
+            <h2 class="text-3xl font-bold uppercase">hunting phone</h2>
+        </header>
+
+        <main>
+            <section class="my-5 flex justify-center items-center gap-x-4">
+                <input
+                    id="search-field"
+                    type="text"
+                    placeholder="Search..."
+                    class="input input-bordered w-full max-w-xl"
+                />
+                <button onclick="search()" class="btn btn-accent">
+                    Search
+                </button>
+            </section>
+            <div class="border-t border-gray-200 h-1"></div>
+            <section>
+                <div
+                    id="phone-container"
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-5 my-10"
+                ></div>
+
+                <div id="show-all-container" class="text-center my-10 hidden">
+                    <button class="btn btn-accent">Show All</button>
+                </div>
+            </section>
+        </main>
+
+        <footer></footer>
+
+        <!-- scripts -->
+        <script src="js/phone.js"></script>
+    </body>
+</html>

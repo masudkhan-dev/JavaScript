@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js dom</title>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h2 id="js">hello javascript</h2>
+        <h2>hello javascript dom</h2>
+      </header>
+      <main id="main">
+        <ul class="ul-constainer">
+          <li class="demo">demo list1</li>
+          <li class="demo">demo list2</li>
+          <li class="demo">demo list3</li>
+          <li class="demo">demo list4</li>
+          <li>demo list5</li>
+        </ul>
+      </main>
+    </section>
+    <section>
+      <header>
+        <h2 id="js">hello javascript</h2>
+        <h2>hello javascript dom</h2>
+      </header>
+      <main>
+        <ul id="ul">
+          <li class="demo">demo list1</li>
+          <li class="demo">demo list2</li>
+          <li class="demo">demo list3</li>
+          <li class="demo">demo list4</li>
+          <li>demo list5</li>
+        </ul>
+      </main>
+    </section>
+    <section class="last-containerr">
+      <header>
+        <h2 id="js">hello javascript</h2>
+        <h2>hello javascript dom</h2>
+      </header>
+      <main>
+        <ul id="bon">
+          <li>shalbon</li>
+          <li>katabon</li>
+          <li>bandorbon</li>
+          <li>sundorbon</li>
+        </ul>
+      </main>
+    </section>
+
+    <!-- js code will writen here -->
+    <script src="js/style.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // tagName()
+      const listCollection = document.getElementsByTagName("li");
+      console.log(listCollection);
+
+      // innerText দিয়ে চাইলে ভিতরের লেখা গুলো দেখতে পারো
+      for (const item of listCollection) {
+        console.log(item.innerText);
+      }
+
+      // ==========================
+
+      // Id()
+      const id = document.getElementById("js");
+      console.log(id);
+
+      // you can see inner text of any id
+      const id2 = document.getElementById("js").innerText;
+      console.log(id2);
+
+      // you can change the text name
+      console.log((id.innerText = "kire mc javascript"));
+
+      const id3 = (document.getElementById("js").innerText =
+        "hello super fast javascript");
+      console.log(id);
+
+      // ===========================
+      // className()
+      const jsClass = document.getElementsByClassName("demo");
+      console.log(jsClass);
+
+      for (const i of jsClass) {
+        console.log(i.innerText);
+      }
+
+      // quarySelectorAll()
+      const someLi = document.querySelectorAll(".ul");
+      console.log(someLi);
+
+      for (const i of someLi) {
+        console.log(i);
+      }
+
+      // quarySelector()
+      const heda = document.querySelector(".demo");
+      console.log(heda);
+
+      // js styles
+      // you can style anything like css
+
+      document.getElementById("js").style.backgroundColor = "red";
+
+      document.getElementById("js").style.fontSize = "30px";
+
+      document.getElementById("js").style.color = "green";
+
+      document.getElementById("js").style.textAlign = "center";
+
+      // add() remove()
+
+      const title = document.getElementById("js");
+      title.getAttribute("class");
+    </script>
+  </body>
+</html>
